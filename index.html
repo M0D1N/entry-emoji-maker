@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="icon/icon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    <script type="text/javascript" src="script.js"></script>
+    </script>
+    <title>ENTRY EMOJI MAKER</title>
+</head>
+<body>
+    
+ 
+    <div id=icon></div>
+    
+    <div id="bar">
+        <li><a href="#">만들기</a></li>
+        <li><a href="#">패치노트</a></li>
+        <li><a href="#">공지사항</a></li>
+    </div>
+    <script type="text/javascript">
+        var img_L = 10;var img_T = 20;var targetObj;
+        function getLeft(o){return parseInt(o.style.left.replace('px', ''));}
+        function getTop(o){return parseInt(o.style.top.replace('px', ''));}
+        function moveDrag(e){var e_obj = window.event? window.event : e;var dmvx = parseInt(e_obj.clientX + img_L);var dmvy = parseInt(e_obj.clientY + img_T);targetObj.style.left = dmvx +"px";targetObj.style.top = dmvy +"px";return false;}
+        function startDrag(e, obj){targetObj = obj;var e_obj = window.event? window.event : e;img_L = getLeft(obj) - e_obj.clientX;img_T = getTop(obj) - e_obj.clientY;document.onmousemove = moveDrag;document.onmouseup = stopDrag;if(e_obj.preventDefault)e_obj.preventDefault();}
+        function stopDrag(){document.onmousemove = null;document.onmouseup = null;}
+    </script>
+    <div id=sorry><h1>현재 사용하시는 기기는 정식 지원하지 않습니다.<br>죄송합니다.</h1><img src="emoji/developer_sorry.svg"></img></div>
+    <div class="workarea">
+        <img src="test.png" id="ob" class="ob" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:move; border:0" onmousedown="startDrag(event, this)"></img>
+        <img src="test2.png" id="ob" class="ob" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:move; border:0" onmousedown="startDrag(event, this)"></img>
+    </div>
+    <script>
+    </script>
+    <div id="menu">
+        <img src="test.png" onclick="add(this.src);">
+        <img src="test2.png" onclick="add(this.src);">
+        
+    </div>
+
+</body>
+</html><!--<img src="test.png">
+    <img src="test2.png">-->
+
+    <!--onclick="console.log(this.src)"-->

@@ -1,0 +1,155 @@
+li {
+    list-style: none;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #687ba1;
+    overflow-x: hidden;
+    
+}
+
+#icon {
+    margin: 10px;
+    position: absolute;
+    z-index: 100;
+    height: 64px;
+    width: 65px;
+    background-image: url(icon/icon.ico);
+    background-size: 65px;
+}
+
+#bar {
+    background-color: #93abd9;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: black;
+}
+
+@media all and (min-width:960px)
+{
+
+.workarea img {
+    cursor: move;
+    transform: scale(90%)
+    
+    
+}
+.workarea {
+    background-color: whitesmoke;
+        height : 50%;
+        width : 50%;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+       
+}
+
+#menu {
+    background-color: cornsilk;
+    border-radius: 8px;
+    width: 80%;
+    height: 30%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 120%);
+    
+}
+
+#menu img {
+    width: 50px;
+    height: 50px;
+}
+
+#sorry {
+    color: #687ba1;
+}
+
+#sorry img {
+    visibility: hidden;
+    width: 1%;
+    height: 1%;
+}
+}
+
+#bar li {
+    transform: translate(150px);
+    display:inline-block;
+    text-align: center;
+    border: 10px #93abd9;
+    width: 260px;
+    height:80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#bar li:hover {
+    font-weight: 500;
+
+}
+@media all and (max-width:960px) {
+
+
+
+body {
+    background-color:#3b455a;
+}
+
+.workarea img, #menu img {
+    visibility: hidden;
+}
+
+
+
+#sorry {
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#bar {
+    background-color: #5e6f8d;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    z-index: 0;
+}
+
+#icon {
+    -webkit-user-drag: none;
+    margin: 10px;
+    position: absolute;
+    z-index: 100;
+    height: 64px;
+    width: 65px;
+    background-image: url(icon/icon_err.ico);
+    background-size: 65px;
+}
+
+button {
+    visibility: hidden;
+}
+
+#bar li {
+    visibility: hidden;
+}
+}
+
